@@ -1,6 +1,12 @@
 import styled from '@emotion/styled';
 
 export const ProfileCard = styled.div`
+    max-width: 350px;
+    text-align:center;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
     background-color: white;
     border-radius: 10px;
     box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
