@@ -2,16 +2,16 @@ import { StatisticsItem } from "components/StatisticsItem/StatisticsItem";
 import PropTypes from "prop-types";
 import { StatList } from "./StatisticsData.styled";
 
-export const StatisticsData = ({ items }) => {
+export const StatisticsData = ({ stats }) => {
     return <StatList>
-        {items.map(({ id, label, percentage }) => (
+        {stats.map(({ id, label, percentage }) => (
             <StatisticsItem key={id} label={label} percentage={percentage} />
         ))}
     </StatList>;
 }
 
 StatisticsData.propTypes = {
-    items: PropTypes.arrayOf(PropTypes.exact({
+    stats: PropTypes.arrayOf(PropTypes.exact({
         id: PropTypes.string.isRequired,
         label: PropTypes.string.isRequired,
         percentage: PropTypes.number.isRequired,

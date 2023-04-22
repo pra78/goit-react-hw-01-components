@@ -1,17 +1,17 @@
 import PropTypes from "prop-types";
 import { StatisticsData } from "components/StatisticsData/StatisticsData";
-import { StatisticsCard } from "./Statistics.styled";
+import { Header, StatisticsCard } from "./Statistics.styled";
 
-export const Statistics = ({title, items }) => {
+export const Statistics = ({title, stats }) => {
     return <StatisticsCard>
-        {title && <h2>{title}</h2>}
-        <StatisticsData items={items} />
+        {title && <Header>{title}</Header>}
+        <StatisticsData stats={stats} />
     </StatisticsCard>;
 }
 
 Statistics.propTypes = {
     title: PropTypes.string,
-    items: PropTypes.arrayOf(
+    stats: PropTypes.arrayOf(
         PropTypes.exact ({
             id: PropTypes.string.isRequired,
             label: PropTypes.string.isRequired,
